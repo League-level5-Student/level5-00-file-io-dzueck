@@ -17,18 +17,18 @@ public class Runner {
 	
 	public static void win() {
 		
-		try (FileInputStream fis = new FileInputStream(new File(path)); ObjectInputStream ois = new ObjectInputStream(fis)) {
+		/*try (FileInputStream fis = new FileInputStream(new File(path)); ObjectInputStream ois = new ObjectInputStream(fis)) {
 			yes = (PixelArtMaker) ois.readObject();
 			yes.start();
 		} catch (IOException e) {
 			e.printStackTrace();
 			
-		} catch (ClassNotFoundException e) {
+		} catch (ClassNotFoundException e) {*/
 			// This can occur if the object we read from the file is not
 			// an instance of any recognized class
 			yes = new PixelArtMaker();
 			yes.start();
-		}
+		//}
 		
 	}
 }
